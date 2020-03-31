@@ -30,9 +30,9 @@ MEDIA_URL = '/media/'
 
 ALLOWED_HOSTS = ['gentle-gorge-77739.herokuapp.com', '127.0.0.1', 'localhost']
 
-SESSION_COOKIE_SECURE = False
-CSRF_COOKIE_SECURE = False
-SECURE_SSL_REDIRECT = False
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+SECURE_SSL_REDIRECT = True
 # Application definition
 
 LOGGING = {
