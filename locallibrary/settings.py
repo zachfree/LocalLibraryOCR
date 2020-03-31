@@ -29,7 +29,7 @@ DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['gentle-gorge-77739.herokuapp.com']
 
 #SESSION_COOKIE_SECURE=True
 #CSRF_COOKIE_SECURE=True
