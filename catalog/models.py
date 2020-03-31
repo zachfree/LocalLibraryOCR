@@ -6,7 +6,7 @@ from django.urls import reverse # Used to generate URLs by reversing the URL pat
 from django.contrib.auth.models import User
 import pytesseract
 from PIL import Image
-pytesseract.pytesseract.tesseract_cmd = r'tesseract'
+pytesseract.pytesseract.tesseract_cmd = r'/vendor/tesseract-ocr/bin/tesseract'
 
 class Genre(models.Model):
     """Model representing a book genre."""
