@@ -1,0 +1,9 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Title: {{ ocrimage.file_name }}</h1>
+
+  <p><strong>Text:</strong> {{ ocrimage.text }}</a></p>
+  <img src="{{ ocrimage.photo.url }}">
+
+{% endblock %}

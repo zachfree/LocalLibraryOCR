@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>OCRImage List</h1>
+  {% if ocrimage_list %}
+  <ul>
+    {% for ocrimage in ocrimage_list %}
+      <li>
+        <a href="{{ ocrimage.get_absolute_url }}">{{ ocrimage.file_name }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no ocrimages in the library.</p>
+  {% endif %}
+  <a href="{% url 'ocrimage_upload' %}">Add File</a>
+{% endblock %}
