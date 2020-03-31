@@ -107,7 +107,7 @@ class LoanedBooksStaffView(PermissionRequiredMixin, generic.ListView):
     paginate_by = 10
 
     def get_queryset(self):
-        return BookInstance.objects.exclude(due_back__gte=datetime.date.today()).exclude(borrower__isnull=True).order_by('due_back') # pylint: disable=line-too-long
+        return BookInstance.objects.filter(status__exact='o').order_by('due_back') # pylint: disable=line-too-long
 
 @permission_required('catalog.can_mark_returned')
 def renew_book_librarian(request, pk):
